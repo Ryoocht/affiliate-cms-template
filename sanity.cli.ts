@@ -8,7 +8,7 @@ export default defineCliConfig({
   graphql: [
     {
       playground: true,
-      tag: 'v1',
+      tag: 'dev',
     },
   ],
 })
