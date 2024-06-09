@@ -1,3 +1,14 @@
 {
-  "extends": "@sanity/eslint-config-studio"
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["@sanity/eslint-config-studio", "eslint:recommended", "plugin:prettier/recommended"],
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "rules": {
+    "prettier/prettier": "error"
+  }
 }
