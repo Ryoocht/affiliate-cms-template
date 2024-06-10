@@ -1,5 +1,5 @@
-import {defineField, defineType} from 'sanity'
-import {MasterDetailIcon} from '@sanity/icons'
+import { defineArrayMember, defineField, defineType } from 'sanity'
+import { MasterDetailIcon } from '@sanity/icons'
 
 export const page = defineType({
   name: 'page',
@@ -16,8 +16,22 @@ export const page = defineType({
       name: 'slug',
       description: 'A URL-friendly identifier describing the page.',
       type: 'slug',
-      options: {source: 'name'},
-      validation: (rule) => rule.required().error('Slug is required to generate a page'),
+      options: { source: 'name' },
+      validation: rule =>
+        rule.required().error('Slug is required to generate a page'),
+    }),
+    defineField({
+      name: 'pageSections',
+      title: 'Page Sections',
+      type: 'array',
+      of: [
+        defineArrayMember({
+          name: 'blogPost',
+          title: 'Blog Post',
+          type: 'reference',
+          to: [{ type: 'blogPost' }],
+        }),
+      ],
     }),
   ],
 })
