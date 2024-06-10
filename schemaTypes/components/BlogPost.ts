@@ -29,8 +29,7 @@ export const blogPost = defineType({
     defineField({
       name: 'mainImage',
       description: 'The responsive image asset to use for this blog post.',
-      type: 'reference',
-      to: [{ type: '' }],
+      type: 'responsiveAsset',
     }),
   ],
 })

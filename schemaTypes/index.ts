@@ -8,6 +8,9 @@ import { textBlock } from './textBlock'
 /* Documents */
 // import {}
 
+/* Fields */
+import * as FieldObjects from './objects/fields'
+
 export const schemaTypes = [
   cta,
   ctaBlock,
@@ -15,4 +18,6 @@ export const schemaTypes = [
   imageCarousel,
   page,
   textBlock,
+
+  ...Object.values(FieldObjects),
 ]
