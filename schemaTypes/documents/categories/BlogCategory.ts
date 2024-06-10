@@ -1,10 +1,12 @@
 import { defineField, defineType } from 'sanity'
+import { ProjectsIcon } from '@sanity/icons'
 
 export const blogCategory = defineType({
   name: 'blogCategory',
   title: 'Blog Category',
   description: 'Categories for blog posts.',
   type: 'document',
+  icon: ProjectsIcon,
   fields: [
     defineField({
       name: 'category',

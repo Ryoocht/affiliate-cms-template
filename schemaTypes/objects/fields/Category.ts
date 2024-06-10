@@ -35,7 +35,7 @@ export const category = defineType({
       type: 'string',
     }),
   ],
-    preview: {
+  preview: {
     select: {
       title: 'title',
       subtitle: 'description',

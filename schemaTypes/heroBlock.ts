@@ -1,4 +1,4 @@
-import {defineType, defineField, defineArrayMember} from 'sanity'
+import { defineType, defineField, defineArrayMember } from 'sanity'
 
 export const heroBlock = defineType({
   type: 'object',
@@ -15,7 +15,7 @@ export const heroBlock = defineType({
     defineField({
       type: 'image',
       name: 'image',
-      options: {hotspot: true},
+      options: { hotspot: true },
     }),
     defineField({
       type: 'array',

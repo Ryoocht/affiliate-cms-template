@@ -1,4 +1,4 @@
-import {defineType, defineField, defineArrayMember} from 'sanity'
+import { defineType, defineField, defineArrayMember } from 'sanity'
 
 export const imageCarousel = defineType({
   type: 'object',
@@ -17,7 +17,7 @@ export const imageCarousel = defineType({
               name: 'caption',
             },
           ],
-          options: {hotspot: true},
+          options: { hotspot: true },
         }),
       ],
     }),

@@ -1,10 +1,12 @@
 import { defineField, defineType } from 'sanity'
+import { ProjectsIcon } from '@sanity/icons'
 
 export const reviewCategory = defineType({
   name: 'reviewCategory',
   title: 'Review Category',
   description: 'Categories for reviews.',
   type: 'document',
+  icon: ProjectsIcon,
   fields: [
     defineField({
       name: 'category',

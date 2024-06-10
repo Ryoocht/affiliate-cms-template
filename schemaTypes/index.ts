@@ -1,23 +1,12 @@
-import { cta } from './cta'
-import { ctaBlock } from './ctaBlock'
-import { heroBlock } from './heroBlock'
-import { imageCarousel } from './imageCarousel'
-import { page } from './olgPage'
-import { textBlock } from './textBlock'
-
+/* Components */
+import * as Components from './components'
 /* Documents */
-// import {}
-
+import * as Documents from './documents'
 /* Fields */
-import * as FieldObjects from './objects/fields'
+import * as FieldObjects from './objects'
 
 export const schemaTypes = [
-  cta,
-  ctaBlock,
-  heroBlock,
-  imageCarousel,
-  page,
-  textBlock,
-
+  ...Object.values(Components),
+  ...Object.values(Documents),
   ...Object.values(FieldObjects),
 ]

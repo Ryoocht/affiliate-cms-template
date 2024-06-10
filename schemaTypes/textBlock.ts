@@ -1,4 +1,4 @@
-import {defineType, defineField, defineArrayMember} from 'sanity'
+import { defineType, defineField, defineArrayMember } from 'sanity'
 
 export const textBlock = defineType({
   type: 'object',
@@ -23,7 +23,7 @@ export const textBlock = defineType({
               name: 'caption',
             },
           ],
-          options: {hotspot: true},
+          options: { hotspot: true },
         }),
       ],
     }),
