@@ -12,7 +12,14 @@ export const category = defineType({
       title: 'Title',
       description: 'The name of the category.',
       type: 'string',
-      validation: rule => rule.required().error(''),
+      validation: rule =>
+        rule
+          .required()
+          .error('A title is required for the category.')
+          .min(3)
+          .error('The title must be at least 3 characters long.')
+          .max(20)
+          .error('The title can be up to 50 characters long.'),
     }),
     defineField({
       name: 'slug',
@@ -20,7 +27,7 @@ export const category = defineType({
       description:
         'A unique identifier for this category, generated from the name.',
       type: 'slug',
-      options: { source: 'title' },
+      options: { source: 'title', maxLength: 96 },
       validation: rule =>
         rule
           .required()

@@ -21,7 +21,7 @@ export const responsiveAsset = defineType({
       description:
         'A unique identifier for this responsive asset, generated from the name.',
       type: 'slug',
-      options: { source: 'name' },
+      options: { source: 'name', maxLength: 96 },
       validation: rule =>
         rule
           .required()

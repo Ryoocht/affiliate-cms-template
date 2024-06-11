@@ -16,7 +16,7 @@ export const page = defineType({
       name: 'slug',
       description: 'A URL-friendly identifier describing the page.',
       type: 'slug',
-      options: { source: 'name' },
+      options: { source: 'name', maxLength: 96 },
       validation: rule =>
         rule.required().error('Slug is required to generate a page'),
     }),
