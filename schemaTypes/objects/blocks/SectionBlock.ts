@@ -12,18 +12,7 @@ export const sectionBlock = defineType({
       title: 'Content',
       description: 'The content of the section block.',
       type: 'array',
-      of: [
-        {
-          type: 'block',
-          title: 'Text',
-          description: 'Textual content of the section.',
-        },
-        {
-          type: 'image',
-          title: 'Image',
-          description: 'An image to be displayed in the section.',
-        },
-      ],
+      of: [{ type: 'block' }, { type: 'image' }],
     }),
   ],
 })
